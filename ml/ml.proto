@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package ml;
+
+message Artifact {
+    string uuid = 1;
+}
+
+message ArtifactRequest {
+    bytes tar = 1;
+}
+
+service Boxer {
+    rpc Run(ArtifactRequest) returns (Artifact) {}
+}
