@@ -3,14 +3,12 @@ import os
 from concurrent import futures
 from dotenv import load_dotenv
 from ml import ml_pb2_grpc
-from ml import ml_pb2
+from ml import runner
 
 
 class Boxer(ml_pb2_grpc.BoxerServicer):
     def Run(self, request, context):
-        artifact = ml_pb2.Artifact()
-        artifact.uuid = "test"
-        return artifact
+        return runner.launch()
 
 
 def serve():

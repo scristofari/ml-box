@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ml.proto',
   package='ml',
   syntax='proto3',
-  serialized_pb=_b('\n\x08ml.proto\x12\x02ml\"\x18\n\x08\x41rtifact\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"\x1e\n\x0f\x41rtifactRequest\x12\x0b\n\x03tar\x18\x01 \x01(\x0c\x32\x33\n\x05\x42oxer\x12*\n\x03Run\x12\x13.ml.ArtifactRequest\x1a\x0c.ml.Artifact\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x08ml.proto\x12\x02ml\"(\n\x08\x41rtifact\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\"\x1e\n\x0f\x41rtifactRequest\x12\x0b\n\x03tar\x18\x01 \x01(\x0c\x32\x33\n\x05\x42oxer\x12*\n\x03Run\x12\x13.ml.ArtifactRequest\x1a\x0c.ml.Artifact\"\x00\x62\x06proto3')
 )
 
 
@@ -39,6 +39,13 @@ _ARTIFACT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='status', full_name='ml.Artifact.status', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -52,7 +59,7 @@ _ARTIFACT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=16,
-  serialized_end=40,
+  serialized_end=56,
 )
 
 
@@ -82,8 +89,8 @@ _ARTIFACTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42,
-  serialized_end=72,
+  serialized_start=58,
+  serialized_end=88,
 )
 
 DESCRIPTOR.message_types_by_name['Artifact'] = _ARTIFACT
@@ -112,8 +119,8 @@ _BOXER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=74,
-  serialized_end=125,
+  serialized_start=90,
+  serialized_end=141,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',

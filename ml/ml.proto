@@ -4,6 +4,7 @@ package ml;
 
 message Artifact {
     string uuid = 1;
+    string status = 2;
 }
 
 message ArtifactRequest {
